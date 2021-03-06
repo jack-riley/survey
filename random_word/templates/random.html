@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random</title>
+    {% load static %}	
+    <link rel="stylesheet" href="{% static 'css/rand.css' %}">
+
+</head>
+<body>
+    <div class = 'container'>
+        <h3>Random Word (attempt # {{request.session.counter}})</h3>
+        <h1>{{word}}</h1>
+        <form action="/random_word/" method = 'POST'>
+        {% csrf_token %}
+        <button type="submit">Generate</button>
+        </form>
+        <form action="/random_word/reset/" method = 'POST'>
+        {% csrf_token %}
+        <button type="submit">Reset</button>
+        </form>
+        
+    </div>
+</body>
+</html>
+

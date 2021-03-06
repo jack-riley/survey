@@ -1,0 +1,34 @@
+.container{
+    width: 500px;
+    min-height: 300px;
+    margin: auto;
+    background-color: lightgray;
+    padding: 50 px;
+
+}
+
+h1{
+    text-align: center;
+    padding: 5px;
+    outline: solid;
+    outline-color: black;
+}
+
+h3{
+    text-align: center;
+}
+
+button{
+    padding: 5px;
+    background-color: navy;
+    margin: 5px 215px;
+    outline: solid;
+    outline-color: white;
+    color: white;
+    display: inline-block;
+    text-align: center;
+}
+form{
+    display: inline-block;
+
+}
