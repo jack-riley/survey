@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+    {% load static %}	
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+
+</head>
+<body>
+    <div class= container>
+        <h1>Please Fill out our Survey</h1>
+
+        <form action="/result" method="POST">
+            {% csrf_token %}
+
+            <p>First Name:</p><input name = "first_name" type ="text">
+            <p>Last Name:</p><input name = "last_name" type ="text">
+            <p>Email:</p><input name = "email" type ="text">
+            <p>Location:</p><input name = "location" type ="text">
+            <p>Favorite Language:</p><input name = "language" type ="text">
+            <p>Comment:</p><input id = comm name = "comment" type ="text">
+
+
+            <button type="submit">Submit</button>
+        </form>
+
+        
+    </div>
+    
+</body>
+</html>

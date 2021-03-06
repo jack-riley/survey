@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+    {% load static %}	
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+
+</head>
+<body>
+    <div class= container>
+        <h1>Results</h1>
+
+        <form action="/result" method="POST">
+            <p>First Name: {{first_name}}</p>
+            <p>Last Name: {{last_name}}</p>
+            <p>Email: {{email}}</p>
+            <p>Location: {{location}}</p>
+            <p>Favorite Language: {{language}}</p>
+            <p>Comment: {{comment}}</p>
+        </form>
+
+        
+    </div>
+    
+</body>
+</html>
