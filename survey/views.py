@@ -4,17 +4,19 @@ from django.shortcuts import render, redirect
 
 def results (request) :
      if request.method == "POST":
-         context = {
-         'first_name': request.POST["first_name"],
-         'last_name': request.POST["last_name"],
-         'email': request.POST["email"],
-         'location' : request.POST["location"],
-         'favorite_language': request.POST["language"],
-         'first_comment' : request.POST["comment"],
-          }
-         return render(request, 'result.html', context)
-     return render (request, 'result.html')
+         request.session['first_name'] = request.POST['first_name'],
+         request.session['last_name'] = request.POST["last_name"],
+         request.session['email'] = request.POST["email"],
+         request.session['location'] = request.POST["location"],
+         request.session['language'] = request.POST["language"],
+         request.session['comment'] = request.POST["comment"],
+         request.session['counter'] = 100,
+          
+     return redirect('/display')
 
+def display (request):
+    return render(request, "result.html")
+	
  
 def form (request):
     return render(request, "request.html")

@@ -21,6 +21,10 @@
 
  } 
 
+ p #comment {
+     display: block;
+ }
+
  button{
      color: lightgray;
      background-color: navy;

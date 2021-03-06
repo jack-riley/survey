@@ -12,12 +12,12 @@
         <h1>Results</h1>
 
         <form action="/result" method="POST">
-            <p>First Name: {{first_name}}</p>
-            <p>Last Name: {{last_name}}</p>
-            <p>Email: {{email}}</p>
-            <p>Location: {{location}}</p>
-            <p>Favorite Language: {{language}}</p>
-            <p>Comment: {{comment}}</p>
+            <p>First Name: {{request.session.first_name}}</p>
+            <p>Last Name: {{request.session.last_name}}</p>
+            <p>Email: {{request.session.email}}</p>
+            <p>Location: {{request.session.location}}</p>
+            <p>Favorite Language: {{request.session.language}}</p>
+            <p id='comment'>Comment: {{request.session.comment}}</p>
         </form>
 
         
